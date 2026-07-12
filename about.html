@@ -1813,6 +1813,223 @@ border: 2px solid #ededed;
 }
 
 }
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+  .popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup-box {
+    background: #fff;
+    width: 90%;
+    height: auto;
+    max-width: 580px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  .popup-overlay.active .popup-box {
+    transform: scale(1);
+  }
+
+  /* CLOSE BUTTON */
+  .popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: #4A4A4A;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 30px;
+    transition: background 0.3s;
+  }
+  .popup-close:hover { background: #f5b400; }
+
+  /* HEADING */
+  .popup-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-top: 5px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  /* 20% OFF ANIMATION */
+  .popup-discount {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #f5b400; /* orange */
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite; /* bara chota */
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  /* TEXT */
+  .popup-box p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14.5px;
+    color: #3f3f3f;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  /* FORM */
+  .popup-form input {
+    width: 100%;
+    
+    padding: 12px 15px;
+    border: 1px solid #f5b400;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+  }
+  .popup-form input:focus { border-color: #f5b400; }
+  
+  .popup-form .phone-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+  .popup-form .phone-group span { margin-right: 8px; font-size: 18px; }
+  .popup-form .phone-group input { border: none; margin: 0; padding-left: 0; }
+
+  .popup-btn {
+    background: #f5b400;
+    color: #fff;
+    width: 120px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0px auto 0 auto;
+    display: block;
+  }
+  .popup-btn:hover { background: #f5b400; }
+
+  /* MOBILE */
+  @media(max-width: 767px) {
+   
+    .popup-box { padding: 25px 20px; height: auto;  }
+    .popup-discount { font-size: 34px; }
+    .popup-box h2 { font-size: 20px; }
+    .popup-btn {padding: 8px; margin-top: -10px;}
+    
+  }
+@media (max-width:767px){
+
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:#fff;
+}
+
+footer{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+
+body > *:last-child{
+    margin-bottom:0 !important;
+}
+
+}
+
+
+
+
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+@media (max-width:768px){
+
+.hush-section{
+    padding:50px 15px;
+}
+
+.hush-container{
+    display:block;
+}
+
+.hush-left{
+    width:100%;
+}
+
+.hush-form{
+    width:100%;
+    max-width:100%;
+    margin:30px auto 0;
+    padding:20px 15px;
+    overflow:hidden;
+}
+
+.hush-form *{
+    max-width:100%;
+}
+
+.hush-form input,
+.hush-form select,
+.hush-form textarea{
+    width:100%;
+}
+
+.hush-form .checkbox-group{
+    grid-template-columns:1fr;
+}
+
+.hush-btn{
+    width:100%;
+}
+}
 
 
     </style>
@@ -2048,6 +2265,16 @@ border: 2px solid #ededed;
 
 
 
+
+
+
+
+
+
+
+
+
+
   <section class="hush-section">
     <div class="hush-container">
 
@@ -2232,6 +2459,51 @@ border: 2px solid #ededed;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <!-- KUCH BHI CONTENT YAHAN -->
+  <!-- <h1 style="text-align:center; margin-top:100px;"></h1> -->
+
+  <!-- POPUP -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <button class="popup-close" id="closePopup">×</button>
+      
+      <h2>Time to Launch Big</h2>
+      <div class="popup-discount">20% OFF</div>
+      <p>Get expert, author-friendly publishing that sells—quality, speed & support at the best price today!</p>
+
+      <form class="popup-form" id="popupForm">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="text" placeholder="Enter Your Country" required>
+        
+        <div class="phone-group">
+          <span>🇦🇺</span>
+          <input type="text" placeholder="+61" required>
+        </div>
+
+        <button type="submit" class="popup-btn">Submit</button>
+      </form>
+    </div>
+  </div>
   
   <!-- 1. MODAL POPUP -->
   <div class="modal-overlay" id="modalOverlay">
@@ -2304,8 +2576,8 @@ border: 2px solid #ededed;
  
 
 
-  <script>
-     const modal = document.getElementById('modalOverlay');
+ <script>
+  const modal = document.getElementById('modalOverlay');
 const openButtons = document.querySelectorAll('.openModalBtn');
   const form = document.getElementById('discoveryForm');
 
@@ -2339,6 +2611,11 @@ openButtons.forEach(button => {
     document.body.classList.remove('modal-open');
     form.reset();
   });
+
+
+
+
+
 
 
 
@@ -2399,29 +2676,7 @@ window.addEventListener("scroll", () => {
 
 
 // FORM VALIDATION - SAME AS PEHLE
-  document.getElementById('mainForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (e.target.checkValidity()) {
-      alert('Form Submitted Successfully!');
-      e.target.reset();
-    } else {
-      e.target.reportValidity(); // Khali ho to error
-    }
-  });
 
-   // ACCORDION JS - CLICK PAR OPEN/CLOSE with > arrow
-  const headers = document.querySelectorAll('.accordion-header');
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      header.classList.toggle('active');
-      if(content.style.maxHeight){
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  });
 
   // FORM VALIDATION JS - ERROR PE RED BORDER
   document.getElementById('hushForm').addEventListener('submit', function(e){
@@ -2476,13 +2731,20 @@ window.addEventListener("scroll", () => {
     document.getElementById('popup').classList.remove('active');
   });
 
+
+
+
+
+
+
+
   const closeBtn = document.getElementById("modalCloseBtn");
   closeBtn.addEventListener("click", function () {
     modal.classList.remove("active");
     document.body.classList.remove("modal-open");
 });
 
-  </script>
+</script>
 
 </body>
 </html>
